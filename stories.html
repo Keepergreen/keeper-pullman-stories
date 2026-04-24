@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keeper × Pullman Legian — Social Stories · March 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green-dark:   #122E22;
+  --green-navy:   #1C4A36;
+  --green-mid:    #2D6E52;
+  --green-teal:   #4A9E78;
+  --green-muted:  #8BBFA0;
+  --green-faint:  #5A8A72;
+  --gold:         #C9A84C;
+  --cream:        #F6F3ED;
+  --cream-warm:   #FAF8F4;
+  --ink:          #0F1A14;
+  --ink-soft:     #2A3D30;
+  --ink-mid:      #4A5E52;
+  --ink-muted:    #7A8A82;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: #F2EFE8;
+  color: var(--ink);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── PAGE HEADER ── */
+.page-header {
+  background: var(--green-dark);
+  border-bottom: 3px solid var(--gold);
+  padding: 32px 40px 28px;
+}
+.page-header-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+.logo-sub {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--green-muted);
+  margin-top: 3px;
+}
+.page-meta {
+  text-align: right;
+}
+.page-meta-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(246,243,237,.85);
+}
+.page-meta-sub {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--green-muted);
+  margin-top: 4px;
+}
+
+/* ── MAIN LAYOUT ── */
+.page-body {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 52px 24px 80px;
+}
+
+.intro {
+  margin-bottom: 48px;
+}
+.intro-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.intro-label::before { content: ''; display: block; width: 24px; height: 1px; background: var(--ink-muted); opacity: .5; }
+.intro-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--green-navy);
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+.intro-heading em { font-style: italic; color: var(--gold); }
+.intro-body {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--ink-mid);
+  max-width: 600px;
+}
+
+/* ── STORY SECTION ── */
+.story-section { margin-bottom: 60px; }
+.story-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.story-num::before { content: ''; display: block; width: 24px; height: 1px; background: rgba(28,74,54,.3); }
+
+/* ── CARD BASE ── */
+.card {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(18,46,34,.12), 0 1px 4px rgba(18,46,34,.08);
+}
+
+/* ── STORY 1 · Dark green ── */
+.s1 { background: var(--green-dark); }
+.s1-top { padding: 32px 36px 24px; }
+.s1-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--green-faint);
+  margin-bottom: 16px;
+}
+.s1-hed {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #F0EDE6;
+  line-height: 1.2;
+}
+.s1-hed em { font-style: italic; color: var(--gold); }
+.s1-rule { height: 1px; background: rgba(74,158,120,.2); margin: 0 36px; }
+.s1-context {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 24px 36px;
+}
+.s1-ctx-block {
+  padding: 18px 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(74,158,120,.18);
+  background: rgba(28,74,54,.45);
+}
+.s1-ctx-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--green-faint);
+  margin-bottom: 10px;
+}
+.s1-ctx-stat {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: #F0EDE6;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.s1-ctx-desc {
+  font-family: 'Barlow', sans-serif;
+  font-size: 12px;
+  color: var(--green-muted);
+  line-height: 1.55;
+}
+.s1-body { padding: 0 36px 24px; }
+.s1-copy {
+  font-family: 'Barlow', sans-serif;
+  font-size: 14.5px;
+  line-height: 1.82;
+  color: rgba(240,237,230,.72);
+}
+.s1-copy strong { color: #F0EDE6; font-weight: 600; }
+.s1-pull {
+  display: block;
+  margin: 18px 0;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--gold);
+  line-height: 1.55;
+  border-left: 2px solid var(--gold);
+  padding-left: 18px;
+}
+.s1-footer {
+  padding: 16px 36px;
+  border-top: 1px solid rgba(74,158,120,.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tags { display: flex; gap: 7px; flex-wrap: wrap; }
+.s1-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .08em;
+  padding: 4px 10px;
+  border-radius: 3px;
+  border: 1px solid rgba(74,158,120,.3);
+  color: var(--green-muted);
+}
+
+/* ── STORY 2 · Warm cream ── */
+.s2 { background: var(--cream-warm); }
+.s2-accent { height: 3px; background: linear-gradient(90deg, var(--green-navy) 0%, var(--gold) 55%, rgba(201,168,76,.15) 100%); }
+.s2-head { padding: 28px 32px 22px; }
+.s2-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 12px;
+}
+.s2-hed {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--green-navy);
+  line-height: 1.22;
+}
+.s2-hed em { font-style: italic; }
+.s2-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid rgba(28,74,54,.1);
+}
+.s2-left {
+  padding: 22px 26px 26px;
+  border-right: 1px solid rgba(28,74,54,.1);
+}
+.s2-right { padding: 22px 26px 26px; background: #fff; }
+.s2-block-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 10px;
+}
+.s2-big {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 56px;
+  font-weight: 900;
+  color: var(--green-navy);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.s2-big-gold { color: var(--gold); }
+.s2-big-sub {
+  font-family: 'Barlow', sans-serif;
+  font-size: 12.5px;
+  color: var(--ink-mid);
+  line-height: 1.5;
+}
+.s2-body { padding: 22px 32px 26px; border-top: 1px solid rgba(28,74,54,.1); }
+.s2-copy {
+  font-family: 'Barlow', sans-serif;
+  font-size: 14.5px;
+  line-height: 1.82;
+  color: var(--ink-mid);
+}
+.s2-copy strong { color: var(--green-navy); }
+.s2-quote {
+  margin-top: 18px;
+  padding: 16px 20px;
+  background: var(--cream);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 7px 7px 0;
+}
+.s2-qt {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.68;
+}
+.s2-qa {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: 8px;
+}
+.s2-footer {
+  padding: 14px 32px;
+  border-top: 1px solid rgba(28,74,54,.1);
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.s2-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .08em;
+  padding: 4px 10px;
+  border-radius: 3px;
+  border: 1px solid rgba(28,74,54,.18);
+  color: var(--green-mid);
+}
+
+/* ── STORY 3 · Clean editorial ── */
+.s3 { background: #fff; }
+.s3-head { padding: 28px 32px 20px; }
+.s3-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 12px;
+}
+.s3-hed {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.22;
+}
+.s3-hed em { font-style: italic; color: var(--green-mid); }
+.s3-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-top: 1px solid rgba(28,74,54,.1);
+}
+.s3-cell { padding: 20px 24px; border-right: 1px solid rgba(28,74,54,.1); }
+.s3-cell:last-child { border-right: none; }
+.s3-cell-lbl {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 8px;
+}
+.s3-cell-val {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--green-navy);
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.s3-cell-sub {
+  font-family: 'Barlow', sans-serif;
+  font-size: 11.5px;
+  color: var(--ink-muted);
+  line-height: 1.45;
+}
+.s3-body { padding: 20px 32px 26px; border-top: 1px solid rgba(28,74,54,.1); }
+.s3-copy {
+  font-family: 'Barlow', sans-serif;
+  font-size: 14.5px;
+  line-height: 1.82;
+  color: var(--ink-mid);
+}
+.s3-copy strong { color: var(--ink); }
+.s3-callout {
+  margin-top: 18px;
+  padding: 16px 20px;
+  border: 1px solid rgba(28,74,54,.15);
+  border-radius: 8px;
+  background: #F8F6F2;
+}
+.s3-callout-text {
+  font-family: 'Barlow', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: var(--ink-mid);
+}
+.s3-callout-text strong { color: var(--ink); }
+.s3-footer {
+  padding: 14px 32px;
+  border-top: 1px solid rgba(28,74,54,.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.s3-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .08em;
+  padding: 4px 10px;
+  border-radius: 3px;
+  border: 1px solid rgba(28,74,54,.15);
+  color: var(--ink-muted);
+}
+.s3-url {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--green-mid);
+  text-decoration: none;
+}
+.s3-url:hover { text-decoration: underline; }
+
+/* ── CAPTION BOX ── */
+.caption-wrap {
+  margin-top: 14px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid rgba(28,74,54,.1);
+  padding: 18px 20px;
+}
+.caption-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.caption-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+.copy-btn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(28,74,54,.2);
+  background: transparent;
+  color: var(--ink-mid);
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.copy-btn:hover { background: #F2EFE8; }
+.copy-btn.ok { color: var(--green-mid); border-color: rgba(45,110,82,.4); }
+.caption-text {
+  font-family: 'Barlow', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.78;
+  color: var(--ink-mid);
+  white-space: pre-wrap;
+}
+
+/* ── PAGE FOOTER ── */
+.page-footer {
+  background: var(--green-dark);
+  border-top: 1px solid rgba(74,158,120,.15);
+  padding: 28px 40px;
+}
+.page-footer-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-note {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .1em;
+  color: rgba(138,191,160,.6);
+}
+.footer-link {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .1em;
+  color: rgba(138,191,160,.6);
+  text-decoration: none;
+}
+.footer-link:hover { color: var(--green-muted); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 620px) {
+  .page-header { padding: 24px 20px; }
+  .page-body { padding: 32px 16px 60px; }
+  .s1-context, .s2-split, .s3-row { grid-template-columns: 1fr; }
+  .s2-left { border-right: none; border-bottom: 1px solid rgba(28,74,54,.1); }
+  .s3-cell { border-right: none; border-bottom: 1px solid rgba(28,74,54,.1); }
+  .s3-cell:last-child { border-bottom: none; }
+  .s1-top, .s1-body, .s1-footer { padding-left: 22px; padding-right: 22px; }
+  .s1-rule { margin: 0 22px; }
+  .s1-context { padding: 20px 22px; }
+  .s2-head, .s2-body, .s2-footer { padding-left: 20px; padding-right: 20px; }
+  .s3-head, .s3-body, .s3-footer { padding-left: 20px; padding-right: 20px; }
+  .s1-hed, .s2-hed, .s3-hed { font-size: 22px; }
+  .page-meta { text-align: left; }
+}
+</style>
+</head>
+<body>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <a href="https://www.keeper.green" target="_blank" rel="noopener" class="logo-wrap">
+      <svg width="44" height="34" viewBox="0 0 52 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polyline points="4,6 16,20 4,34" stroke="#4A9E78" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <polyline points="13,6 25,20 13,34" stroke="#4A9E78" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <polyline points="22,6 34,20 22,34" stroke="#C9A84C" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <polyline points="31,6 43,20 31,34" stroke="#C9A84C" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      <div>
+        <div class="logo-text">Keeper</div>
+        <div class="logo-sub">ESG Impact Platform</div>
+      </div>
+    </a>
+    <div class="page-meta">
+      <div class="page-meta-title">Pullman Legian Beach Bali</div>
+      <div class="page-meta-sub">Social Stories · March 2026 Impact Report</div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="page-body">
+
+  <div class="intro">
+    <div class="intro-label">For the hotel team</div>
+    <div class="intro-heading">Three stories.<br><em>Ready to share.</em></div>
+    <div class="intro-body">Each story below is drawn directly from the March 2026 ESG Impact Report. Click "Copy" under any story to copy the suggested caption for LinkedIn, Instagram, or internal staff sharing.</div>
+  </div>
+
+  <!-- STORY 1 -->
+  <div class="story-section">
+    <div class="story-num">Story 1 · Bali &amp; global context</div>
+    <div class="card s1">
+      <div class="s1-top">
+        <div class="s1-eyebrow">Pullman Legian Beach Bali · March 2026</div>
+        <div class="s1-hed">Bali generates 3,436 tonnes<br>of waste <em>every single day.</em><br>We chose a different path.</div>
+      </div>
+      <div class="s1-rule"></div>
+      <div class="s1-context">
+        <div class="s1-ctx-block">
+          <div class="s1-ctx-label">Global picture · CGR 2026</div>
+          <div class="s1-ctx-stat">6.9%</div>
+          <div class="s1-ctx-desc">of materials entering the global economy are secondary. 93% still come from virgin sources. The Value Gap: €25.4 trillion lost annually to linear waste.</div>
+        </div>
+        <div class="s1-ctx-block">
+          <div class="s1-ctx-label">Pullman Legian · March 2026</div>
+          <div class="s1-ctx-stat">3,619 kg</div>
+          <div class="s1-ctx-desc">diverted from landfill. 8,833 kg CO₂e avoided. 2,929 items resold or donated. Zero sent to Bali's overflowing waste infrastructure.</div>
+        </div>
+      </div>
+      <div class="s1-body">
+        <div class="s1-copy">
+          Bali's main landfill — TPA Suwung — recently faced closure after decades of absorbing 3,600 cubic tonnes daily from the island's hotels, homes, and restaurants. Bali's governor has made it clear: <strong>green hotels are the future of Bali's tourism economy.</strong> Sustainability is no longer a differentiator. It's a threshold.
+          <span class="s1-pull">"For every €3 of economic value created globally, around €1 is lost to wasteful, linear material use." — Circularity Gap Report 2026</span>
+          This month, we diverted <strong>78 televisions, 1,908 linen items, 325 uniforms, 136 engineering assets, and 482 room disposal items</strong> through structured resale and donation. Not a beach cleanup. Not a pledge. A fully documented, verified diversion cycle — tracked from inventory to delivery.
+        </div>
+      </div>
+      <div class="s1-footer">
+        <div class="tags">
+          <div class="s1-tag">#CircularHospitality</div>
+          <div class="s1-tag">#BaliWaste</div>
+          <div class="s1-tag">#ZeroLandfill</div>
+          <div class="s1-tag">#CGR2026</div>
+        </div>
+      </div>
+    </div>
+    <div class="caption-wrap">
+      <div class="caption-top">
+        <div class="caption-label">Suggested caption</div>
+        <button class="copy-btn" onclick="doCopy(this,'c1')">Copy</button>
+      </div>
+      <div class="caption-text" id="c1">Bali generates 3,436 tonnes of waste every single day. Its main landfill recently faced permanent closure. The Circularity Gap Report 2026 tells us that globally, €1 in every €3 of economic value created is simply lost to linear, wasteful material use.
+
+This month, we chose differently.
+
+Across TVs, linen, uniforms, furniture, and engineering assets — 3,619 kg of hotel inventory was fully diverted from Bali's waste stream. Everything was resold or donated. Nothing went to landfill. The result: 8,833 kg of CO₂e avoided and a fully documented audit trail.
+
+Bali's governor said it plainly: "Green hotels are the future of Bali." We agree. And we're doing the work to prove it.
+
+#ZeroLandfill #CircularHospitality #BaliWaste #CGR2026 #PullmanBali #Sustainability</div>
+    </div>
+  </div>
+
+  <!-- STORY 2 -->
+  <div class="story-section">
+    <div class="story-num">Story 2 · Community &amp; people</div>
+    <div class="card s2">
+      <div class="s2-accent"></div>
+      <div class="s2-head">
+        <div class="s2-eyebrow">Community impact · March 2026</div>
+        <div class="s2-hed">When a hotel clears its stores,<br><em>a village benefits.</em></div>
+      </div>
+      <div class="s2-split">
+        <div class="s2-left">
+          <div class="s2-block-label">Donated</div>
+          <div class="s2-big">325</div>
+          <div class="s2-big-sub">staff uniforms across<br>11 hotel departments</div>
+        </div>
+        <div class="s2-right">
+          <div class="s2-block-label">People reached</div>
+          <div class="s2-big s2-big-gold">100–140</div>
+          <div class="s2-big-sub">vulnerable people in<br>remote Bali villages</div>
+        </div>
+      </div>
+      <div class="s2-body">
+        <div class="s2-copy">
+          In a region where Bali's waste crisis is squeezing every part of the supply chain — from overflowing rivers to a landfill that was nearly shut — donations like this one don't just clear storage. <strong>They close a loop that the waste system never could.</strong><br><br>
+          Working with <strong>SoleFamily Bali</strong>, a registered NGO supporting 800+ vulnerable families across the island, every uniform was sorted, documented, and hand-delivered. The in-kind value: <strong>IDR 6,503,000</strong>. The full tax documentation trail: complete.
+        </div>
+        <div class="s2-quote">
+          <div class="s2-qt">"We would like to thank Pullman Hotel and the team for the incredibly generous donation of used uniforms which will be given to villagers in impoverished areas."</div>
+          <div class="s2-qa">Sarah Chapman, Co-Founder — SoleFamily Bali</div>
+        </div>
+      </div>
+      <div class="s2-footer">
+        <div class="s2-tag">#SoleFamilyBali</div>
+        <div class="s2-tag">#HospitalityWithHeart</div>
+        <div class="s2-tag">#BaliCommunity</div>
+        <div class="s2-tag">#CircularEconomy</div>
+      </div>
+    </div>
+    <div class="caption-wrap">
+      <div class="caption-top">
+        <div class="caption-label">Suggested caption</div>
+        <button class="copy-btn" onclick="doCopy(this,'c2')">Copy</button>
+      </div>
+      <div class="caption-text" id="c2">Bali's waste infrastructure is under serious pressure. Its rivers carry plastic waste to the ocean every monsoon. Its main landfill nearly shut down this year. Into that context, what a hotel does with its retired inventory matters more than ever.
+
+This month, 325 staff uniforms from across our 11 departments didn't go to waste. They went to SoleFamily Bali — a registered NGO supporting over 800 vulnerable families — and from there to villagers in remote areas of the island.
+
+"Thank you so much for the incredibly generous donation." — Sarah Chapman, Co-Founder, SoleFamily Bali
+
+In-kind value documented: IDR 6,503,000. People reached: 100–140. Items diverted: all of them.
+
+This is what circular hospitality looks like in practice — not a campaign, but a supply chain decision with real human outcomes.
+
+#SoleFamilyBali #HospitalityWithHeart #BaliCommunity #CircularEconomy #PullmanBali</div>
+    </div>
+  </div>
+
+  <!-- STORY 3 -->
+  <div class="story-section">
+    <div class="story-num">Story 3 · Business &amp; industry</div>
+    <div class="card s3">
+      <div class="s3-head">
+        <div class="s3-eyebrow">Responsible asset management · Pullman Legian Beach Bali</div>
+        <div class="s3-hed">The Value Gap is real.<br><em>Here is how we closed ours.</em></div>
+      </div>
+      <div class="s3-row">
+        <div class="s3-cell">
+          <div class="s3-cell-lbl">Revenue recovered</div>
+          <div class="s3-cell-val">IDR 78.2M</div>
+          <div class="s3-cell-sub">from assets that would otherwise have been disposal costs</div>
+        </div>
+        <div class="s3-cell">
+          <div class="s3-cell-lbl">Weight diverted</div>
+          <div class="s3-cell-val">3,619 kg</div>
+          <div class="s3-cell-sub">across 5 categories, 2,929 individual items</div>
+        </div>
+        <div class="s3-cell">
+          <div class="s3-cell-lbl">CO₂e avoided</div>
+          <div class="s3-cell-val">8,833 kg</div>
+          <div class="s3-cell-sub">GHG Protocol Scope 3 compliant, Green Globe ready</div>
+        </div>
+      </div>
+      <div class="s3-body">
+        <div class="s3-copy">
+          The Circularity Gap Report 2026 identifies <strong>end-of-life waste as the single largest source of value loss globally — €10 trillion annually</strong> — precisely because assets are discarded before their value is exhausted. Hotels are a textbook case: high asset turnover, complex logistics, limited time to manage disposal properly.<br><br>
+          In March 2026, we ran a full structured diversion cycle across TVs, linen, uniforms, furniture, and engineering equipment. Every item was inventoried, valued, and directed to its highest-value next use. The result was not a cost — <strong>it generated IDR 78.2M in confirmed revenue.</strong>
+        </div>
+        <div class="s3-callout">
+          <div class="s3-callout-text">With Bali's tourism industry under pressure to demonstrate green credentials — and the governor publicly linking hotel sustainability to the island's future as a destination — <strong>having a documented, auditable diversion record is no longer optional.</strong> It is what Green Globe certification, CSR reporting, and guest trust increasingly require.</div>
+        </div>
+      </div>
+      <div class="s3-footer">
+        <div class="tags">
+          <div class="s3-tag">#CircularEconomy</div>
+          <div class="s3-tag">#GreenGlobe</div>
+          <div class="s3-tag">#HospitalityESG</div>
+          <div class="s3-tag">#ValueGap</div>
+        </div>
+        <a href="https://www.keeper.green" target="_blank" rel="noopener" class="s3-url">keeper.green</a>
+      </div>
+    </div>
+    <div class="caption-wrap">
+      <div class="caption-top">
+        <div class="caption-label">Suggested caption</div>
+        <button class="copy-btn" onclick="doCopy(this,'c3')">Copy</button>
+      </div>
+      <div class="caption-text" id="c3">The Circularity Gap Report 2026 puts a number on what the industry has long suspected: €10 trillion in economic value is lost every year because products and assets are discarded before their value runs out. Hotels are one of the clearest examples of this.
+
+In March 2026, Pullman Legian Beach Bali ran a full structured asset diversion cycle — and closed that gap on our own inventory.
+
+The outcome:
+— IDR 78,200,000 in confirmed revenue from resold assets
+— 3,619 kg diverted, zero to landfill
+— 8,833 kg CO₂e avoided, GHG Protocol Scope 3 documented
+— Full Green Globe-ready reporting prepared
+
+TVs, linen, uniforms, engineering equipment, furniture — every item tracked and directed to its highest-value next use through Keeper's circular stewardship platform.
+
+With Bali's governor on record saying green hotels are the island's future, and sustainability increasingly a baseline for guest trust, this kind of documented action is the work that matters.
+
+#CircularEconomy #GreenGlobe #HospitalityESG #ValueGap #PullmanBali #Sustainability</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- PAGE FOOTER -->
+<div class="page-footer">
+  <div class="page-footer-inner">
+    <div class="footer-note">Keeper × Pullman Legian Beach Bali · ESG Impact Report · March 2026</div>
+    <a href="https://www.keeper.green" target="_blank" rel="noopener" class="footer-link">keeper.green</a>
+  </div>
+</div>
+
+<script>
+function doCopy(btn, id) {
+  const text = document.getElementById(id).textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = 'Copied';
+    btn.classList.add('ok');
+    setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('ok'); }, 2000);
+  }).catch(() => {
+    const el = document.getElementById(id);
+    const range = document.createRange();
+    range.selectNode(el);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+    btn.textContent = 'Copied';
+    btn.classList.add('ok');
+    setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('ok'); }, 2000);
+  });
+}
+</script>
+</body>
+</html>
